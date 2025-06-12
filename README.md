@@ -124,15 +124,15 @@ var edad = 19;     //  devuelve -- >  undefined
 
 Aquí no solo hemos DECLARADO la variable, **también la hemos ASIGNADO (al mismo tiempo**). Esto lo ve diferente comparado que si SOLO la DEFINIMOS.
 
-\
+
 
 
 BUENAS PRÁCTICAS:
-\
+
 Debemos evitar problemas de **hoisting**: **mejor declararlas al principio** para evitar este tipo de problema.
 
-\
-\
+
+
 
 
 ## 2. ¿Cuáles son algunos tipos de datos JS?
@@ -140,23 +140,23 @@ Debemos evitar problemas de **hoisting**: **mejor declararlas al principio** par
 Una primera distinción es datos PRIMITIVOS y NO PRIMITIVOS.
 
 En _JavaScript_, un **PRIMITIVO** o **primitive** (valor primitivo, tipo de dato primitivo) son datos que **no son un objeto y no tienen métodos** (por lo tanto, estos últimos serían **NO PRIMITIVOS**) Hay 6 tipos de datos primitivos: **string, number, bigint, boolean, undefined y symbol**.
-\
+
 También hay **null**, que aparentemente es primitivo, pero de hecho es un caso especial, lo considera _**Object**_: y cualquier tipo estructurado se deriva de **null** por la Cadena de prototipos.
 
 La mayoría de las veces, un valor primitivo se representa directamente en el nivel más bajo de la implementación del lenguaje.
 
 Todos los primitivos son **inmutables**, es decir, no se pueden modificar. Es importante **no confundir un primitivo en sí mismo con un valor primitivo asignado a una variable**. **Se puede reasignar un nuevo valor a la variable, pero el valor existente no se puede cambiar** de la misma forma en que se pueden modificar los objetos, los arreglos y las funciones.
 
-\
+
 
 
 **1) ALGUNOS TIPOS DE DATOS**
 
-\
+
 
 
 1. Cadena de texto (**string**)
-   \
+   
    El tipo de datos **string** representa una secuencia de **caracteres, como texto o palabras**. Las cadenas se deben encerrar entre **comillas simples ' ' o dobles " "**.
 
 ```javascript
@@ -164,7 +164,7 @@ var cat = 'Sammy';
 let dog = "Mixie";
 ```
 
-\
+
 
 
 2. Números (**number**)
@@ -176,7 +176,7 @@ var edad = 25;
 let precio = 99.95;
 ```
 
-\
+
 
 
 3. Booleano (**boolean**)
@@ -188,7 +188,7 @@ var precioMarcado = true;
 var clienteVIP = false;
 ```
 
-\
+
 
 
 4. Null o nulo (**null**)
@@ -200,7 +200,7 @@ var usuarioAdmin = null;
 console.log(typeof usuarioAdmin);   //devuelve: "object"
 ```
 
-\
+
 
 
 5. Undefined (**undefined**)
@@ -212,33 +212,33 @@ var casa;
 console.log(casa); // Devuelve:  undefined
 ```
 
-\
+
 
 
 6. Símbolo (**symbol**)
 
 El tipo de datos **symbol** es único y se utiliza para **identificadores únicos de objetos**. Podemos añadirle o no una **descripción, es opcional**, y podrá ser útil en la **depuración** del código.
-\
+
 Como decimos, se garantiza que los **símbolos son únicos**. Aunque declaremos **varios Symbols con la misma descripción**, éstos tendrán **valores distintos**. La descripción es solamente una etiqueta que no afecta nada más.
 
 ```javascript
 var miSimbolo = Symbol('iris');
 ```
 
-\
+
 
 
 7. Objetos (**object**)
 
 Como hemos dicho, es un tipo de datos NO PRIMITIVO. Los **objetos** en _JavaScript_ son colecciones de **pares clave-valor**, donde la **clave** es una _**cadena (o símbolo)**_ y el **valor** puede ser _**cualquier tipo de dato**_, incluidos otros objetos. En cuanto a la **sintaxis**:
-\
-\- Utilizaremos **llaves {}**,
-\
-\- Si tenemos **un solo clave-valor**, lo podemos poner en **una línea**.
-\
-\- Para **varios pares clave-valor**, con **comas en varias líneas**, como vemos en el siguiente ejemplo.
-\
-\- Para **acceder al valor de una clave**, utilizaremos el **dot notation** o notación por puntos.
+
+- Utilizaremos **llaves {}**,
+
+- Si tenemos **un solo clave-valor**, lo podemos poner en **una línea**.
+
+- Para **varios pares clave-valor**, con **comas en varias líneas**, como vemos en el siguiente ejemplo.
+
+- Para **acceder al valor de una clave**, utilizaremos el **dot notation** o notación por puntos.
 
 ```javascript
 var cliente1 = {
@@ -294,7 +294,7 @@ cliente1.habilidades.caligrafia = 9;
 console.log(cliente1.habilidades.caligrafia);  //Devuelve 9
 ```
 
-\
+
 
 
 8. Arrays / arreglos (**array**)
@@ -308,15 +308,15 @@ De nuevo un tipo de dato NO PRIMITIVO. Los **arrays** en _JavaScript_ son **obje
 * Así que, en el caso de llamar a una **base de datos**, o a una **API**, si queremos obtener cualquier tipo de **colección**, _JavaScript_ lo pondrá en un **array**. Por esto **los arrays** son tan frecuentes en _JavaScript_.
 
 En _JavaScript_ podemos poner **en una variable** todo tipo de elementos: **números, strings, objetos, funciones...**¡Enseguida se pone la cosa bastante confusa!
-\
+
 Pero si tenemos **los mismos tipos de datos**: por ej. una gran cantidad de **usuarios**, un listado de **restaurantes**, o publicaciones de **blogs**… generalmente los almacenas en un **array**. Nos es útil tener una estructura de datos donde almacenar un único array **dentro de una variable** y así poder trabajar con ella.
 
-\
+
 
 
 _**Dos formas principales para crear un array:**_
 
-\
+
 
 
 1. **A TRAVÉS DE LA PALABRA CLAVE `new` y el constructor `Array()`**
@@ -341,8 +341,8 @@ var generandoArray = new Array("rojo", "verde", "azul");
 generandoArray;      // Devuelve  ["rojo","verde","azul"]             
 ```
 
-\
-\
+
+
 
 
 2. **A TRAVÉS DE LA SINTAXIS LITERAL DEL ARRAY, con el uso de corchetes \[ ]**
@@ -377,13 +377,13 @@ console.log(arrayMezclado[4]());       // devolviendo la función ejecutada: "ve
 
 En la última línea, vemos algo muy común: **retornar un método dentro de un objeto**.
 
-\
+
 
 
 Una de las maneras más fáciles de entender la forma que los **arrays** funcionan en _JavaScript_ es pensar en ellos como una **colección de todos los elementos** que hemos venido utilizando hasa ahora: no hay nada de especial en ello. Recogen todo tipo de cosas, puedes poner lo que sea dentro de un array. **Solo hay que tener en cuenta la forma de almacenar**.
 
-\
-\
+
+
 
 
 **2) CONSULTA DEL TIPO DE DATOS: uso de `typeof`**
@@ -404,11 +404,11 @@ typeof edad;               //devuelve:  "object"
 
 ```
 
-\
+
 
 
 _**CASO PRÁCTICO DE USO:**_
-\
+
 Imaginemos **una aplicación web** y no sabemos **si todos los valores que retornan están completos**. Sabemos a lo que tenemos acceso PERO no qué elementos realmente contienen algo.
 
 *   Por ejemplo, uno de los atributos de la aplicación web es un **usuario de&#x20;**_**Twitter**_**, pero OPCIONAL**, por lo que la información puede estar ahí o no:
@@ -418,13 +418,13 @@ Imaginemos **una aplicación web** y no sabemos **si todos los valores que retor
 
     Aquí, necesitaríamos confirmar si el valor es **`undefined`** o si, por el contrario, simplemente no está relleno al ser opcional; sería el caso de `null`.
 
-\
-\
+
+
 
 
 **3) CAMBIO DEL TIPO DE DATOS o DATA CASTING**
 
-\
+
 
 
 _JavaScript_ intenta hacerlo de forma **automática**. A veces no resulta tan buena idea porque se pueden producir **equivocaciones**:
@@ -444,7 +444,7 @@ _JavaScript_ intenta hacerlo de forma **automática**. A veces no resulta tan bu
 
 **`null` lo convierte a 0** porque asume que se trata de algún cálculo y que no queremos tomar nulo como un valor. Interpreta que al estar vacío pues es 0 en una operación.
 
-\
+
 
 
 **== > Números a "string"**
@@ -467,19 +467,19 @@ edad.toString();          //devuelve: "47"
 
 Ambos métodos funcionan por igual, pero quizá la tendencia es a usar la _**dot notation**_ o **notación por puntos** :
 `nombreVariable.toString()`
-\
+
 La razón es que quizá sea algo más cómodo de usar.
 
-\
+
 
 
 **== > "string" a "números"**
 
 _**USOS DE CAMBIO A NÚMEROS**_:
-\
+
 Muchas aplicaciones de _JavaScript_ están basadas en **API**, lo que significa que se están comunicando con **el mundo exterior, y éste por lo general envía números como strings**, al utilizar un lenguaje llamado **notación de objetos** de _JavaScript_ . Recibiremos datos que **deberían ser números, decimales**, pero sin embargo están enviando como **strings**!!
 
-\
+
 
 
 Veamos las opciones que tenemos de conversion de **string** a **números** junto con su **sintaxis**:
@@ -506,14 +506,14 @@ console.log(nuevaEdad);  // devuelve: 40
 
 ```
 
-\
+
 
 
 **== > Booleanos a "números"**
 
 `true` se convierte en **1** y `false` se convierte en **0**.
 
-\
+
 
 
 Esto es **muy útil** ya que todos los ordenadores y sistemas de todo el mundo utilizan **ceros y unos (código binario)**. Al final **todo lo que programamos** y hacemos se debe convertir en **ceros y unos**. Por ello resulta muy **útil** cuando necesitamos **revisar algo**.
@@ -522,15 +522,15 @@ _**EJEMPLO DE UN USO CONCRETO DE CONVERSIÓN DE BOOLEANOS EN 0 Y EN 1**_:
 
 * Si estamos trabajando en un sistema que **no tiene realmente el concepto de VERDADERO o FALSO**, necesitamos devolver un **0** ó un **1**: ésta sería una manera rápida y eficiente de hacerlo. Sería el caso de que tengamos una función que se **comunica con alguna otra API**, y esta **API no sabe qué significa VERDADERO y FALSO** (no lo puede interpretar), **pero sí interpreta un 0 y un 1**, entonces lo podremos envolver como `true` o `false` , lo retornamos y todo funcionará.
 
-\
-\
+
+
 
 
 ## 3. ¿Cuáles son las tres funciones de String en JS?
 
 3 funciones muy útiles para trabajar con datos tipo "**string**":
 
-\
+
 
 
 * 1 `.toLowerCase()` - `toUpperCase()` - . Devuelve el texto transformado a **minúsculas - mayúsculas** respectivamente:
@@ -542,14 +542,14 @@ console.log(text.toLowerCase());   // "las zonas verdes pueden protegerse."
 console.log(text.toUpperCase());   // "LAS ZONAS VERDES PUEDEN PROTEGERSE."
 ```
 
-\
-\
+
+
 
 
 * 2 `.trim()` - `.trimEnd()` - `.trimStart()` Eliminador de espacios en blanco.\
 
 
-\
+
 
 
 EJEMPLO1: Eliminando espacios en blanco a ambos extremos:
@@ -559,7 +559,7 @@ var prueba1 = "      borrando todos los espacios en blanco a los extremos       
 console.log(prueba1.trim()); // devuelve: "borrando todos los espacios en blanco a los extremos"
 ```
 
-\
+
 
 
 EJEMPLO2: Eliminando los espacios del final:
@@ -570,7 +570,7 @@ let text2 = text1.trimEnd();
 console.log(text2);      // devuelve:   "     ¡¡Hola!!"       (borra espacios al final)
 ```
 
-\
+
 
 
 EJEMPLO3: Eliminando los espacios del comienzo:
@@ -581,8 +581,8 @@ let text2 = text1.trimStart();
 console.log(text2);      // devuelve: "¡¡Hola!!     "        (borra espacios del principio)
 ```
 
-\
-\
+
+
 
 
 * 3 `.replace()`
@@ -599,13 +599,13 @@ let resultado = gracias.replace("carnicería", "tienda de deportes");
 console.log(resultado);   // devuelve: "¡Gracias por comprar en nuestra tienda de deportes!"
 ```
 
-\
+
 
 
 CAMBIO DE **TODOS** LOS ELEMENTOS COINCIDENTES: **"GLOBAL"**.-
 
 La función `.replace()` tiene una versión "**global**", que cambiaría todos los elementos coincidentes a la vez (no sólo el primero),
-\
+
 a través de la **sintaxis** `(/arg1/g, arg2)`
 
 ```javascript
@@ -618,15 +618,15 @@ console.log(resultado);
 
 La `g`del primer argumento, el que deseamos cambiar, significa **GLOBAL**, y sin ella, de nuevo, sólo cambiaría el primer elemento coincidente.
 
-\
-\
+
+
 
 
 ## 4. ¿Qué es un condicional?
 
 Nos da la posibilidad de ejecutar un proceso en el caso de que la **condición** que pongamos sea verdadera, y también en el caso de que ésta sea falsa.
 
-\
+
 
 
 **1. Sintaxis: utilizando `if` ("si"):**
@@ -652,14 +652,14 @@ console.log("Son exactamente iguales")
 
 BUENAS PRÁCTICAS: Es muy raro utilizar solo los **dos iguales porque puedes obtener muchos errores**. Mejor utilizar siempre los tres iguales `===`.
 
-\
+
 
 
 *   **1b).- SI NO ES IGUAL**, tenemos dos opciones:
     `!=` (no es igual a), que **comprueba el valor**
     `!==` (no es igual a), **comprueba el valor y el tipo de datos** (modo **estricto**).
 
-    \
+   \
 
 * **1c).- SI ES MAYOR O IGUAL** `>=` son en realidad dos condiciones unidas por la disyuntiva “o”. **NO tiene una versión ‘estricta’** que compruebe **tipo de datos**, como en las anteriores.
 
@@ -671,7 +671,7 @@ if (edad>= 25) {
 // devuelve "puedes conducir"
 ```
 
-\
+
 
 
 **2. Sintaxis: utilizando `if/else`:**
@@ -689,7 +689,7 @@ if (nota >= 5) {
 // devuelve:   "puedes realizar el siguiente curso"
 ```
 
-\
+
 
 
 **3. Sintaxis: utilizando `if / else / if`:**
@@ -715,11 +715,11 @@ if (puntos <= 10) {
 
 Hay que tener en cuenta de que **si no se cumple la condición**, simplemente IGNORA lo que hay dentro de las llaves {}.
 
-\
+
 
 
 **BUENAS PRÁCTICAS**:
-\
+
 En vez del último `else-if` en la línea de código anterior , `else if (puntos > 25)`, podríamos haber puesto solamente `else`, pero si queremos ser más explícitos y también **asegurarnos de encontrar lo que buscamos**, es más conveniente la primera opción de `else-if`.
 
 Imaginemos una situación en la que la variable `puntos` ni siquiera está puesta como **número** (por ejemplo, **string** u otro dato mal puesto), entonces con el `else` daría esa condición **como cierta**; sin embargo en realidad **sería un error**!! **Las buenas prácticas** nos dicen que mejor no echarlo todo al **"saco de todo el resto de situationes"** en el que se puede traducir los `else`. En este “saco” todo cabe, por lo que puede haber **efectos secundarios** no deseados.
@@ -730,8 +730,8 @@ Explicando este tema un poco más: esto sería como una pequeña **biblioteca de
 //"Elige tu regalo especial en la lista 3 y un vale sin caducidad"
 ```
 
-\
-\
+
+
 
 
 ## 5. ¿Qué es un operador ternario?
@@ -754,7 +754,7 @@ Parece un poco confuso, pero en realidad puede ser bastante cómodo de codificar
 * Detrás de esos `:`repetimos el proceso de poner una **condición verdadera** `puntos >=11 && puntos <= 25`
 * Finalmente, figura **si ninguna de las condiciones anteriores ha resultado verdadera**.
 
-\
+
 
 
 También se podría poner **sin los paréntsis finales**, así, aunque puede resultar **más confuso**:
@@ -766,7 +766,7 @@ let progrPuntos = puntos <= 10 ? "Puedes elegir un regalo de la lista 1" : (punt
 console.log(progrPuntos); // devuelve   "Elige tu regalo especial de la lista 3 y un vale sin caducidad"
 ```
 
-\
+
 
 
 Y también hay desarrolladores que lo prefieren **en varias líneas**:
@@ -780,15 +780,15 @@ let answer = puntos <= 10
 console.log(answer); // devuelve   "Elige tu regalo especial de la lista 3 y un vale sin caducidad"
 ```
 
-\
+
 
 
 BUENAS PRÁCTICAS:
-\
+
 Más que buenas prácticas se trataría de opiniones personales, pero el poner **paréntesis le da cierta claridad**, ya que envuelve perfectamente un concepto y ayuda a visualizar el código, **sin necesidad de escribir varias líneas**.
 
-\
-\
+
+
 
 
 ## 6. ¿Cuál es la diferencia entre una declaración de función y una expresión de función?
@@ -797,7 +797,7 @@ Más que buenas prácticas se trataría de opiniones personales, pero el poner *
 * Al igual que el programa en sí mismo, **una función se compone de una secuencia de declaraciones**, que conforman el llamado **cuerpo de la función**.
 * Se pueden **pasar valores** a una función, y la función **puede devolver un valor**.
 
-\
+
 
 
 #### 1. Declaración de una función
@@ -819,7 +819,7 @@ console.log(typeof saludar); // devuelve: 'function'
 
 Podríamos ejecutar la función `saludar()` **¡incluso antes de haberla creado!** y funcionaría correctamente, ya que _JavaScript_ **primero busca las declaraciones de funciones** y luego procesa el resto del código.
 
-\
+
 
 
 #### 2. Expresión de una función
@@ -842,7 +842,7 @@ Con este nuevo enfoque, estamos creando una función **en el interior de una var
 
 Aquí, la función (_**saludar**_) pasa a ser inútil, ya que si intentamos ejecutar `saludar()` nos dirá que no existe. Sin embargo, cuando ejecutamos `saludo()` funciona correctamente. Ahora **el nombre de la variable pasa a ser el «nombre de la función»**, mientras que el anterior nombre de la función desaparece y se omite, creando un concepto llamado **funciones anónimas**.
 
-\
+
 
 
 #### 3. Diferencias de SINTAXIS entre la "declaración de una función" y la "expresión de una función".
@@ -869,7 +869,7 @@ var soyUnaExpresion = function() {
 }
 ```
 
-\
+
 
 
 #### 4. Diferencias CLAVE entre "DECLARACIÓN DE FUNCIÓN" Y "EXPRESIÓN DE FUNCIÓN".
@@ -890,7 +890,7 @@ function nuevaFuncion() {
 // devuelve:  Hola Mundo!
 ```
 
-\
+
 
 
 En cambio, esto **no es posible con las expresiones de funciones**, ya que no se sabe el valor que va a tener nuestra variable previamente declarada:
@@ -905,8 +905,8 @@ var nuevaFuncion = function nuevaFuncion() {
 //devuelve: Uncaught TypeError: nuevaFuncion is not a function 
 ```
 
-\
-\
+
+
 
 
 Además, **dentro** de un bloque de código, como lo es un **objeto**, solo se pueden poner **las expresiones de función**, pero **no las declaraciones**:
@@ -946,8 +946,8 @@ console.log(wrongMenuBuilder());   // causa el error mencionado
 
 O sea que siempre que necesitemos crear funciones **dentro de un objeto, de una forma dinámica**, debemos utilizar las **expresiones de función**.
 
-\
-\
+
+
 
 
 ## 7. ¿Qué es la palabra clave "this" en JS?
@@ -957,7 +957,7 @@ O sea que siempre que necesitemos crear funciones **dentro de un objeto, de una 
 * En general, el valor de **`this`** está determinado por **cómo se invoca a la función**.
   **No puede ser establecida mediante una asignación en tiempo de ejecución**, y **puede ser diferente** cada vez que la función **es invocada**.
 
-\
+
 
 
 **a) `this` en contexto GLOBAL**
@@ -983,7 +983,7 @@ function saludar() {
 this.saludar(); // Llama a la función global `saludar`
 ```
 
-\
+
 
 
 **b) `this` en llamadas a métodos y como parte de un objeto**
@@ -1004,7 +1004,7 @@ var objeto = {
 };
 ```
 
-\
+
 
 
 **Ejemplo2:**
@@ -1023,7 +1023,7 @@ console.log(test.func());
 
 Como podemos comprobar, dentro de una función, el valor de **`this`** está determinado **por el lugar en el que esa función es invocada**, es decir, se está refiriendo al **objeto mismo**. Veamos más ejemplos:
 
-\
+
 
 
 **Ejemplo3a:**
@@ -1051,7 +1051,7 @@ En este ejemplo, debido a que `play()` es un método **dentro del objeto video**
 
 Del mismo modo, podemos añadir un **método más tarde** y obtener el mismo resultado. Añadamos el método `video.stop()`:
 
-\
+
 
 
 **Ejemplo3b:**
@@ -1082,7 +1082,7 @@ video.stop();
 
 Vemos que la consola devuelve el **objeto `video`** de nuevo, ya que **`stop`** también es un método **dentro del objeto `video`**.
 
-\
+
 
 
 **Ejemplo4a:**
@@ -1144,8 +1144,8 @@ checkP7 (24,6,2,3);   // devuelve "¡El número es mayor que 50!"
 
 ***
 
-\
-\
+
+
 
 
 OTRA OPCIÓN:
@@ -1163,7 +1163,7 @@ checkP7 (24,6,2,3);
 ```
 
 OPCIONES TENIENDO EN CUENTA QUE PUEDE SER =50
-\
+
 1\.
 
 ```javascript
