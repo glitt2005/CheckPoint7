@@ -8,4 +8,4 @@
 * [5. ¿Qué es un operador ternario?](5.-que-es-un-operador-ternario.md)
 * [6. ¿Cuál es la diferencia entre una declaración de función y una expresión de función?](6.-cual-es-la-diferencia-entre-una-declaracion-de-funcion-y-una-expresion-de-funcion.md)
 * [7. ¿Qué es la palabra clave "this" en JS?](7.-que-es-la-palabra-clave-this-en-js.md)
-* [Page 1](page-1.md)
+* [EJERCICIO PRÁCTICO CHECKPOINT 7](ejercicio-practico-checkpoint-7.md)
