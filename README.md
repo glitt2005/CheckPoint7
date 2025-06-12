@@ -2,17 +2,19 @@
 
 ## 1. ¿Qué diferencia a Javascript de cualquier otro lenguaje de programación?
 
-1.  _JavaScript_ es el **único programa** que puede ser **interpretado por un navegador/buscador Web**. Cientos de lenguajes y entre ellos _Python, Java, Ruby, C,_ etc.: todos necesitan estar en un servidor, y si estamos construyendo una página web, ese servidor tiene que construir todos estos procesos y envolver ese código de una forma que el navegador/explorador lo entienda.    _JavaScript_ es un poco diferente: fue **creado** para ello, **para** que pudiera **ser interpretado por los navegadores**. Esto quiere decir que puedes escribir código _JavaScript_ y simplemente abrirlo en **el buscador**, éste lo **analiza, interpreta y ejecuta el programa**. Y eso nos lleva al punto 2:
+1.  _JavaScript_ es el **único programa** que puede ser **interpretado por un navegador/buscador Web**. Cientos de lenguajes y entre ellos _Python, Java, Ruby, C,_ etc.: todos necesitan estar en un servidor, y si estamos construyendo una página web, ese servidor tiene que construir todos estos procesos y envolver ese código de una forma que el navegador/explorador lo entienda.
+    _JavaScript_ es un poco diferente: fue **creado** para ello, **para** que pudiera **ser interpretado por los navegadores**. Esto quiere decir que puedes escribir código _JavaScript_ y simplemente abrirlo en **el buscador**, éste lo **analiza, interpreta y ejecuta el programa**. Y eso nos lleva al punto 2:
 
-    \
+    
 
 2.  Por ello, algunas de las **aplicaciones más potentes están escritas en** _JavaScript_. En el aprendizaje de un desarrollador, enseguida se encontrará con código de _JavaScript_ de una manera u otra. _**Gmail, Twitter, Facebook**_ usan _JavaScript_ extensamente. De hecho, **Google**, que es propietario de _Gmail_ y de _Facebook_, ha creado **su propio marco** de _JavaScript_ (sus propias capas encima de _JavaScript_) lo que hace posible que **los desarrolladores puedan crear su propias aplicaciones** utilizando _JavaScript_.
 
-    \
+    
 
-3.  En la construcción de **aplicaciones móviles**, _JavaScript_ es el lenguaje adecuado hoy en día. Antes cada teléfono tenía su propio lenguaje de programación, pero _JavaScript_ **construyó con sus propias bibliotecas** y sus propias plataformas (_las plataformas o **frameworks** son plantillas o un conjunto de herramientas y componentes predefinidos que proporcionan una base para desarrollar aplicaciones o software_).    _JavaScript_ permite a los desarrolladores **crear software más rápidamente, de manera más eficiente y organizada**, utilizando componentes reutilizables y funcionalidades ya implementadas que permitirán construir aplicaciones utilizando solo _JavaScript_ que se **vincularán directamente a la API de tu smart phone**. Esto significa que podemos crear una aplicación que por ejemplo puede **acceder a la cámara, verificar la ubicación, usar el acelerómetro, etc**. Antes necesitabas utilizar otro lenguaje para esto.
+3.  En la construcción de **aplicaciones móviles**, _JavaScript_ es el lenguaje adecuado hoy en día. Antes cada teléfono tenía su propio lenguaje de programación, pero _JavaScript_ **construyó con sus propias bibliotecas** y sus propias plataformas (_las plataformas o **frameworks** son plantillas o un conjunto de herramientas y componentes predefinidos que proporcionan una base para desarrollar aplicaciones o software_).
+    _JavaScript_ permite a los desarrolladores **crear software más rápidamente, de manera más eficiente y organizada**, utilizando componentes reutilizables y funcionalidades ya implementadas que permitirán construir aplicaciones utilizando solo _JavaScript_ que se **vincularán directamente a la API de tu smart phone**. Esto significa que podemos crear una aplicación que por ejemplo puede **acceder a la cámara, verificar la ubicación, usar el acelerómetro, etc**. Antes necesitabas utilizar otro lenguaje para esto.
 
-    \
+    
 
 4. Es una de las herramientas más poderosas que se puede tener en el arsenal para automatizar el flujo diario de trabajo, muy útil incluso aunque no seas desarrollador. Por ejemplo:
    * **Tareas repetitivas, mecánicas** y pesadas que se tienen al **trabajar en una oficina**: muchas de ellas se podrían automatizar con _JavaScript_,
@@ -69,13 +71,14 @@ console.log(usuario.nombre)    // Devolvería "Fedecirco Faggin"!!!
 
 ```
 
-BUENAS PRÁCTICAS:\
+BUENAS PRÁCTICAS:
+
 Para **no contaminar la variable** deberíamos:
 
 * **evitar tener variables globales**, o bien tener un número muy limitado de ellas. Siempre podremos utilizarlas (accediendo a ellas de la forma adecuada) sin correr riesgos innecesarios.
 * Además, debemos no olvidarnos de poner **var** o **let** cuando declaramos las variables, si no, **accidentamente podríamos crear variables globales**
 
-\
+
 
 
 #### 2. HOISTING O ELEVACIÓN
@@ -110,7 +113,8 @@ console.log(name);
 
 por eso se llama **Hoisting**, porque en realidad es virtualmente **“subida” o elevación**.
 
-**¡OJO!:**\
+**¡OJO!:**
+
 El **hoisting** solo funciona con DECLARACIONES, **no funciona con ASIGNACIONES** :
 
 ```javascript
@@ -123,7 +127,8 @@ Aquí no solo hemos DECLARADO la variable, **también la hemos ASIGNADO (al mism
 \
 
 
-BUENAS PRÁCTICAS:\
+BUENAS PRÁCTICAS:
+\
 Debemos evitar problemas de **hoisting**: **mejor declararlas al principio** para evitar este tipo de problema.
 
 \
@@ -134,7 +139,8 @@ Debemos evitar problemas de **hoisting**: **mejor declararlas al principio** par
 
 Una primera distinción es datos PRIMITIVOS y NO PRIMITIVOS.
 
-En _JavaScript_, un **PRIMITIVO** o **primitive** (valor primitivo, tipo de dato primitivo) son datos que **no son un objeto y no tienen métodos** (por lo tanto, estos últimos serían **NO PRIMITIVOS**) Hay 6 tipos de datos primitivos: **string, number, bigint, boolean, undefined y symbol**.\
+En _JavaScript_, un **PRIMITIVO** o **primitive** (valor primitivo, tipo de dato primitivo) son datos que **no son un objeto y no tienen métodos** (por lo tanto, estos últimos serían **NO PRIMITIVOS**) Hay 6 tipos de datos primitivos: **string, number, bigint, boolean, undefined y symbol**.
+\
 También hay **null**, que aparentemente es primitivo, pero de hecho es un caso especial, lo considera _**Object**_: y cualquier tipo estructurado se deriva de **null** por la Cadena de prototipos.
 
 La mayoría de las veces, un valor primitivo se representa directamente en el nivel más bajo de la implementación del lenguaje.
@@ -149,7 +155,8 @@ Todos los primitivos son **inmutables**, es decir, no se pueden modificar. Es im
 \
 
 
-1. Cadena de texto (**string**)   \
+1. Cadena de texto (**string**)
+   \
    El tipo de datos **string** representa una secuencia de **caracteres, como texto o palabras**. Las cadenas se deben encerrar entre **comillas simples ' ' o dobles " "**.
 
 ```javascript
@@ -210,7 +217,8 @@ console.log(casa); // Devuelve:  undefined
 
 6. Símbolo (**symbol**)
 
-El tipo de datos **symbol** es único y se utiliza para **identificadores únicos de objetos**. Podemos añadirle o no una **descripción, es opcional**, y podrá ser útil en la **depuración** del código.\
+El tipo de datos **symbol** es único y se utiliza para **identificadores únicos de objetos**. Podemos añadirle o no una **descripción, es opcional**, y podrá ser útil en la **depuración** del código.
+\
 Como decimos, se garantiza que los **símbolos son únicos**. Aunque declaremos **varios Symbols con la misma descripción**, éstos tendrán **valores distintos**. La descripción es solamente una etiqueta que no afecta nada más.
 
 ```javascript
@@ -222,10 +230,14 @@ var miSimbolo = Symbol('iris');
 
 7. Objetos (**object**)
 
-Como hemos dicho, es un tipo de datos NO PRIMITIVO. Los **objetos** en _JavaScript_ son colecciones de **pares clave-valor**, donde la **clave** es una _**cadena (o símbolo)**_ y el **valor** puede ser _**cualquier tipo de dato**_, incluidos otros objetos. En cuanto a la **sintaxis**:\
-\- Utilizaremos **llaves {}**,\
-\- Si tenemos **un solo clave-valor**, lo podemos poner en **una línea**.\
-\- Para **varios pares clave-valor**, con **comas en varias líneas**, como vemos en el siguiente ejemplo.\
+Como hemos dicho, es un tipo de datos NO PRIMITIVO. Los **objetos** en _JavaScript_ son colecciones de **pares clave-valor**, donde la **clave** es una _**cadena (o símbolo)**_ y el **valor** puede ser _**cualquier tipo de dato**_, incluidos otros objetos. En cuanto a la **sintaxis**:
+\
+\- Utilizaremos **llaves {}**,
+\
+\- Si tenemos **un solo clave-valor**, lo podemos poner en **una línea**.
+\
+\- Para **varios pares clave-valor**, con **comas en varias líneas**, como vemos en el siguiente ejemplo.
+\
 \- Para **acceder al valor de una clave**, utilizaremos el **dot notation** o notación por puntos.
 
 ```javascript
@@ -295,7 +307,8 @@ De nuevo un tipo de dato NO PRIMITIVO. Los **arrays** en _JavaScript_ son **obje
 * Si creamos **una web de un directorio** como _Páginas Amarillas_ o _Yelp_, y contactamos un **API**, ésta nos enviará una **lista o una colección de elementos**, y _JavaScript_ lo va a interpretar o lo va a poner dentro de un **array**.
 * Así que, en el caso de llamar a una **base de datos**, o a una **API**, si queremos obtener cualquier tipo de **colección**, _JavaScript_ lo pondrá en un **array**. Por esto **los arrays** son tan frecuentes en _JavaScript_.
 
-En _JavaScript_ podemos poner **en una variable** todo tipo de elementos: **números, strings, objetos, funciones...**¡Enseguida se pone la cosa bastante confusa!\
+En _JavaScript_ podemos poner **en una variable** todo tipo de elementos: **números, strings, objetos, funciones...**¡Enseguida se pone la cosa bastante confusa!
+\
 Pero si tenemos **los mismos tipos de datos**: por ej. una gran cantidad de **usuarios**, un listado de **restaurantes**, o publicaciones de **blogs**… generalmente los almacenas en un **array**. Nos es útil tener una estructura de datos donde almacenar un único array **dentro de una variable** y así poder trabajar con ella.
 
 \
@@ -394,7 +407,8 @@ typeof edad;               //devuelve:  "object"
 \
 
 
-_**CASO PRÁCTICO DE USO:**_\
+_**CASO PRÁCTICO DE USO:**_
+\
 Imaginemos **una aplicación web** y no sabemos **si todos los valores que retornan están completos**. Sabemos a lo que tenemos acceso PERO no qué elementos realmente contienen algo.
 
 *   Por ejemplo, uno de los atributos de la aplicación web es un **usuario de&#x20;**_**Twitter**_**, pero OPCIONAL**, por lo que la información puede estar ahí o no:
@@ -451,7 +465,9 @@ var edad = 47;
 edad.toString();          //devuelve: "47" 
 ```
 
-Ambos métodos funcionan por igual, pero quizá la tendencia es a usar la _**dot notation**_ o **notación por puntos** :`nombreVariable.toString()`\
+Ambos métodos funcionan por igual, pero quizá la tendencia es a usar la _**dot notation**_ o **notación por puntos** :
+`nombreVariable.toString()`
+\
 La razón es que quizá sea algo más cómodo de usar.
 
 \
@@ -459,7 +475,8 @@ La razón es que quizá sea algo más cómodo de usar.
 
 **== > "string" a "números"**
 
-_**USOS DE CAMBIO A NÚMEROS**_:\
+_**USOS DE CAMBIO A NÚMEROS**_:
+\
 Muchas aplicaciones de _JavaScript_ están basadas en **API**, lo que significa que se están comunicando con **el mundo exterior, y éste por lo general envía números como strings**, al utilizar un lenguaje llamado **notación de objetos** de _JavaScript_ . Recibiremos datos que **deberían ser números, decimales**, pero sin embargo están enviando como **strings**!!
 
 \
@@ -587,7 +604,8 @@ console.log(resultado);   // devuelve: "¡Gracias por comprar en nuestra tienda 
 
 CAMBIO DE **TODOS** LOS ELEMENTOS COINCIDENTES: **"GLOBAL"**.-
 
-La función `.replace()` tiene una versión "**global**", que cambiaría todos los elementos coincidentes a la vez (no sólo el primero),\
+La función `.replace()` tiene una versión "**global**", que cambiaría todos los elementos coincidentes a la vez (no sólo el primero),
+\
 a través de la **sintaxis** `(/arg1/g, arg2)`
 
 ```javascript
@@ -637,7 +655,9 @@ BUENAS PRÁCTICAS: Es muy raro utilizar solo los **dos iguales porque puedes obt
 \
 
 
-*   **1b).- SI NO ES IGUAL**, tenemos dos opciones:    `!=` (no es igual a), que **comprueba el valor**    `!==` (no es igual a), **comprueba el valor y el tipo de datos** (modo **estricto**).
+*   **1b).- SI NO ES IGUAL**, tenemos dos opciones:
+    `!=` (no es igual a), que **comprueba el valor**
+    `!==` (no es igual a), **comprueba el valor y el tipo de datos** (modo **estricto**).
 
     \
 
@@ -698,7 +718,8 @@ Hay que tener en cuenta de que **si no se cumple la condición**, simplemente IG
 \
 
 
-**BUENAS PRÁCTICAS**:\
+**BUENAS PRÁCTICAS**:
+\
 En vez del último `else-if` en la línea de código anterior , `else if (puntos > 25)`, podríamos haber puesto solamente `else`, pero si queremos ser más explícitos y también **asegurarnos de encontrar lo que buscamos**, es más conveniente la primera opción de `else-if`.
 
 Imaginemos una situación en la que la variable `puntos` ni siquiera está puesta como **número** (por ejemplo, **string** u otro dato mal puesto), entonces con el `else` daría esa condición **como cierta**; sin embargo en realidad **sería un error**!! **Las buenas prácticas** nos dicen que mejor no echarlo todo al **"saco de todo el resto de situationes"** en el que se puede traducir los `else`. En este “saco” todo cabe, por lo que puede haber **efectos secundarios** no deseados.
@@ -762,7 +783,8 @@ console.log(answer); // devuelve   "Elige tu regalo especial de la lista 3 y un 
 \
 
 
-BUENAS PRÁCTICAS:\
+BUENAS PRÁCTICAS:
+\
 Más que buenas prácticas se trataría de opiniones personales, pero el poner **paréntesis le da cierta claridad**, ya que envuelve perfectamente un concepto y ayuda a visualizar el código, **sin necesidad de escribir varias líneas**.
 
 \
@@ -932,7 +954,8 @@ O sea que siempre que necesitemos crear funciones **dentro de un objeto, de una 
 
 * **`this`** en _JavaScript_ es una palabra clave muy utilizada dentro de funciones y clases, pues tiene **un valor flexible**. **`this`** significa _**esto**_ en español y, como su nombre indica, hace referencia al objeto en cuestión.
 * La palabra clave **`this`** de una función se **comporta un poco diferente** en _JavaScript_ en comparación con otros lenguajes. Además tiene algunas diferencias entre el modo estricto y el modo no estricto.
-* En general, el valor de **`this`** está determinado por **cómo se invoca a la función**.  **No puede ser establecida mediante una asignación en tiempo de ejecución**, y **puede ser diferente** cada vez que la función **es invocada**.
+* En general, el valor de **`this`** está determinado por **cómo se invoca a la función**.
+  **No puede ser establecida mediante una asignación en tiempo de ejecución**, y **puede ser diferente** cada vez que la función **es invocada**.
 
 \
 
@@ -1139,7 +1162,8 @@ checkP7 (1,2,3,4);
 checkP7 (24,6,2,3);
 ```
 
-OPCIONES TENIENDO EN CUENTA QUE PUEDE SER =50\
+OPCIONES TENIENDO EN CUENTA QUE PUEDE SER =50
+\
 1\.
 
 ```javascript
